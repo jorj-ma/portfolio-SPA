@@ -1,0 +1,19 @@
+.app-container {
+  width: 90%;            /* Give it some breathing room on the sides */
+  max-width: 1200px;     /* Maximum width for large screens */
+  margin: 0 auto;        /* This is the magic that centers the container */
+  padding: 4rem 0;
+  text-align: center;    /* Centers the text in the header */
+}
+
+.header {
+  margin-bottom: 3rem;
+}
+
+/* Ensure the grid takes up the full width of the container */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%; 
+}
