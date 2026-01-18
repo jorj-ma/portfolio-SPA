@@ -11,9 +11,7 @@ const ProjectForm = ({ onAddProject }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    // Basic validation
-    if (!formData.title || !formData.githubUrl) return;
+        if (!formData.title || !formData.githubUrl) return;
 
     const projectWithImage = {
       ...formData,
@@ -24,7 +22,6 @@ const ProjectForm = ({ onAddProject }) => {
 
     onAddProject(projectWithImage);
 
-    // Reset form
     setFormData({
       title: '',
       description: '',
