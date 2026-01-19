@@ -7,7 +7,7 @@ const ProjectCard = ({ project }) => {
       <div className="project-info">
         <h3>{project.title}</h3>
         <p>{project.description}</p>
-        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="github-link">
+        <a href={project.githubUrl} target="_blank" className="github-link">
           View Code on GitHub
         </a>
       </div>

@@ -9,14 +9,13 @@ function App() {
   const [projects, setProjects] = useState(initialProjects);
   const [searchTerm, setSearchTerm] = useState("");
 
-  // Filter projects based on search input to include both caps
   const filteredProjects = projects.filter((project) =>
     project.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   // Function to add new project
   const addProject = (newProject) => {
-    setProjects([...projects, { ...newProject, id: Date.now() }]);
+    setProjects([...projects, { ...newProject, id: projects.length + 1}]);
   };
 
   return (
