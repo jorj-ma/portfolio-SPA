@@ -7,10 +7,10 @@ import './App.css'
 
 function App() {
   const [projects, setProjects] = useState(initialProjects);
-  const [searchTerm, setSearchTerm] = useState("");
+  const [search, setSearch] = useState("");
 
   const filterProjects = projects.filter((project) =>
-    project.title.toLowerCase().includes(searchTerm.toLowerCase())
+    project.title.toLowerCase().includes(search.toLowerCase())
   );
 
   // Function to add new project
@@ -24,7 +24,7 @@ function App() {
         <header className="header">
           <h1>Geo Agency Portfolio</h1>
           <p>Showcasing our best work</p>
-          <SearchBar onSearchChange={setSearchTerm}/>
+          <SearchBar onSChange={setSearch}/>
         </header>
 
         <main>
@@ -41,7 +41,7 @@ function App() {
           </section>
           
           {filterProjects.length === 0 && (
-            <p className="no-results">No projects found matching "{searchTerm}"</p>
+            <p className="no-results">No projects found matching "{search}"</p>
           )}
         </main>
       </div>

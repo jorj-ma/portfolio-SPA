@@ -1,12 +1,12 @@
 import './SearchBar.css';
 
-const SearchBar = ({ onSearchChange }) => {
+const SearchBar = ({ onSChange }) => {
   return (
     <div className="search-container">
       <input
         type="text"
         placeholder="Search projects by Project Title"
-        onChange={(e) => onSearchChange(e.target.value)}
+        onChange={(e) => onSChange(e.target.value)}
         className="search-input"
       />
     </div>
