@@ -9,7 +9,7 @@ function App() {
   const [projects, setProjects] = useState(initialProjects);
   const [searchTerm, setSearchTerm] = useState("");
 
-  const filteredProjects = projects.filter((project) =>
+  const filterProjects = projects.filter((project) =>
     project.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
@@ -35,18 +35,12 @@ function App() {
           <hr className="divider" />
 
           <section className="project-grid">
-            {filteredProjects.map((project) => (
-              <ProjectCard key={project.id} project={project} />
-            ))}
-          </section>
-
-          <section className="project-grid">
-            {filteredProjects.map((project) => (
+            {filterProjects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
           </section>
           
-          {filteredProjects.length === 0 && (
+          {filterProjects.length === 0 && (
             <p className="no-results">No projects found matching "{searchTerm}"</p>
           )}
         </main>
