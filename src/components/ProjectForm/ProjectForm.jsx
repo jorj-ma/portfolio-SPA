@@ -11,12 +11,13 @@ const ProjectForm = ({ onAddProject }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-        if (!formData.title || !formData.githubUrl) return;
+        if (!formData.title || !formData.githubUrl) 
+          return;
 
     const projectWithImage = {
       ...formData,
-      image: formData.image.trim() === '' 
-        ? 'https://via.placeholder.com/400x250' 
+      image: formData.image === '' 
+        ? 'https://images.pexels.com/photos/3650937/pexels-photo-3650937.jpeg' 
         : formData.image
     };
 
@@ -26,7 +27,7 @@ const ProjectForm = ({ onAddProject }) => {
       title: '',
       description: '',
       githubUrl: '',
-      image: 'https://via.placeholder.com/400x250',
+      image: 'https://images.pexels.com/photos/3650937/pexels-photo-3650937.jpeg',
     });
   };
 
