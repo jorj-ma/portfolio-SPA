@@ -27,23 +27,23 @@ function App() {
           <SearchBar onSChange={setSearch}/>
         </header>
 
-        <main>
-          <section className="form-section">
+        <div>
+          <div className="form-section">
               <ProjectForm onAddProject={addProject} />
-          </section>
+          </div>
   
           <hr className="divider" />
 
-          <section className="project-grid">
+          <div className="project-grid">
             {filterProjects.map((project) => (
               <ProjectCard key={project.id} project={project} />
             ))}
-          </section>
+          </div>
           
           {filterProjects.length === 0 && (
             <p className="no-results">No projects found matching "{search}"</p>
           )}
-        </main>
+        </div>
       </div>
     </>
   )
